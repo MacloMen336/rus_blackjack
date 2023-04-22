@@ -1,6 +1,1 @@
 pip install Pillow
-
-
-_tkinter.TclError: bad option "-relx":
- must be -after, -anchor, -before, -expand, 
- -fill, -in, -ipadx, -ipady, -padx, -pady, or -side
