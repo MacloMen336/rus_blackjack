@@ -4,8 +4,6 @@ import random
 from PIL import ImageTk, Image
 import tkinter.messagebox as mb
 
-import time
-
 def MakeTexture():
     global texture
     # global back_of_card
@@ -36,8 +34,10 @@ def take_card(): #взять ещё карту
     canv.delete("all")
     for i in range(0,len(my_cards),+1):
         img1.append(ImageTk.PhotoImage(texture[list(all_cards).index(my_cards[i])]))
+        #--Спаун карт с левого края
         canv.create_image(14+((fWidth/2+79)/(len(my_cards)+1)*(i)),14,image=img1[i],anchor=NW)
-        
+        #--Спаун карт с центра
+        #canv.create_image(14+((fWidth/2+79)/(len(my_cards)+1)*(i+1)),14,image=img1[i],anchor=NW)
         #--test--
         # print(texture[0][list(cards).index(my_cards[i])])
         # print(img1)
